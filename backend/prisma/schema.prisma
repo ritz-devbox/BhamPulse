@@ -1,0 +1,41 @@
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Post {
+  id         String   @id @default(cuid())
+  redditId   String   @unique
+  title      String
+  author     String
+  content    String?
+  flair      String?
+  createdUtc Int
+  media      String?
+  category   String?
+  url        String
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Restaurant {
+  id           String   @id @default(cuid())
+  googlePlaceId String  @unique
+  name         String
+  address      String?
+  latitude     Float?
+  longitude    Float?
+  rating       Float?
+  priceLevel   Int?
+  cuisine      String?
+  categories   String?
+  website      String?
+  menuUrl      String?
+  photoUrl     String?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
