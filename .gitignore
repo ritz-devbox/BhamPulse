@@ -1,0 +1,44 @@
+# Node and build artifacts
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+build/
+**/build/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+*.gz.old
+
+# Env files
+.env
+*.env
+.env.*
+
+# Coverage / temp
+coverage/
+.nyc_output/
+.tmp/
+.temp/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Prisma SQLite (if generated locally)
+*.db
+*.db-journal
+
+
+*.gz
